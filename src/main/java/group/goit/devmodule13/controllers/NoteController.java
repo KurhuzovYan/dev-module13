@@ -1,6 +1,6 @@
 package group.goit.devmodule13.controllers;
 
-import group.goit.devmodule13.entity.Note;
+import group.goit.devmodule13.entities.Note;
 import group.goit.devmodule13.services.NoteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +18,7 @@ public class NoteController {
 
     @GetMapping(value = "/list")
     public ModelAndView getListOfNotes() {
-        ModelAndView model = new ModelAndView("main-page");
+        ModelAndView model = new ModelAndView("notes/main-page");
         model.addObject("notes", noteService.listAll());
         return model;
     }
@@ -31,7 +31,7 @@ public class NoteController {
 
     @GetMapping(value = "/edit")
     public ModelAndView editNote(@RequestParam("id") Long id) {
-        ModelAndView edit = new ModelAndView("editing-page");
+        ModelAndView edit = new ModelAndView("notes/editing-page");
         Note byId = noteService.getById(id);
         edit.addObject("note", byId);
         return edit;
@@ -45,7 +45,7 @@ public class NoteController {
 
     @GetMapping(value = "/create")
     public String createNote() {
-        return "creating-new-node-page";
+        return "notes/creating-new-node-page";
     }
 
     @PostMapping(path = "/create")

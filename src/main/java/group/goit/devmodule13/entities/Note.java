@@ -1,4 +1,4 @@
-package group.goit.devmodule13.entity;
+package group.goit.devmodule13.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

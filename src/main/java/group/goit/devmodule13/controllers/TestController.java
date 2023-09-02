@@ -12,7 +12,7 @@ public class TestController {
 
     @GetMapping(value = "/test")
     public ModelAndView test() {
-        ModelAndView test = new ModelAndView("test");
+        ModelAndView test = new ModelAndView("test/test");
         test.addObject("test", LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy.MM.dd")));
         return test;
     }

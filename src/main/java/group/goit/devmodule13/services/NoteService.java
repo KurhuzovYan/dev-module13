@@ -1,6 +1,6 @@
 package group.goit.devmodule13.services;
 
-import group.goit.devmodule13.entity.Note;
+import group.goit.devmodule13.entities.Note;
 import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
