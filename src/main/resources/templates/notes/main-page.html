@@ -54,7 +54,7 @@
     <p th:text="${note.content}" class="note-content"></p>
     <div class="note-buttons">
       <a th:href="@{/note/edit(id=${note.id})}" class="edit-link btn btn-primary">Edit</a>
-      <form th:action="@{/note/delete/{id} (id=${note.id})}" method="post">
+      <form th:action="@{'/note/delete?id=' + ${note.id}}" method="post">
         <input type="submit" value="Delete" class="btn btn-danger">
       </form>
     </div>

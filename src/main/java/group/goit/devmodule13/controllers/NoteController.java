@@ -23,8 +23,8 @@ public class NoteController {
         return model;
     }
 
-    @PostMapping(path = "/delete/{id}")
-    public String deleteNote(@PathVariable("id") Long id) {
+    @PostMapping(path = "/delete")
+    public String deleteNote(@RequestParam("id") Long id) {
         noteService.deleteById(id);
         return "redirect:/note/list";
     }
